@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jinson Jose | Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#header" class="logo-text">Jinson <span class="highlight">Jose</span></a>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#works">Services</a></li>
+                <li><a href="#projects">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </div>
+    </nav>
+    <!-- Header / Hero Section -->
+    <header id="header">
+        <!-- Unified Hero Profile Card (Matches mockup layout for both desktop and mobile) -->
+        <div class="hero-card">
+            <div class="hero-avatar">
+                <img src="images/phone-background.png" alt="Jinson Jose">
+            </div>
+            <h1 class="hero-name">Hi, I’m Jinson Jose</h1>
+            <p class="hero-caption"><span id="role-text" class="active">Creative Graphic Designer</span></p>
+            <div class="hero-social-icons">
+                <a href="https://instagram.com/_jinson_jose__" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/jinsonjose" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/jinsonjose" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:jinsonjose2001@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <a href="#projects" class="btn btn-animated hero-btn">My Portfolio</a>
+        </div>
+        <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+            <span>Scroll Down</span>
+            <i class="fa-solid fa-angles-down"></i>
+        </div>
+    </header>
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <div class="image-wrapper">
+                        <img src="images/user.png" alt="Jinson Jose">
+                    </div>
+                </div>  
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="description">
+                        I'm a creative Graphic Designer, and aspiring Data Analyst with skills in HTML, CSS, and JavaScript. 
+                        I enjoy designing intuitive user experiences, building responsive websites, and creating meaningful data 
+                        visualizations using tools like Figma, Canva, Adobe Photoshop, Excel, and Power BI.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab(event, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab(event, 'experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab(event, 'education')">Education</p>
+                    </div>
+                    <!-- Skills Tab Content -->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <span class="tab-highlight">Creative Graphic Designer</span>
+                                <span class="tab-desc">Designing Canva, Figma</span>
+                            </li>
+                            <li>
+                                <span class="tab-highlight">Frontend Developer</span>
+                                <span class="tab-desc">Creating responsive, user-friendly, and visually appealing web interfaces using HTML, CSS, and JavaScript.</span>
+                            </li>
+                            <li>
+                                <span class="tab-highlight">Data Analytics</span>
+                                <span class="tab-desc">Creating data visualizations.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Experience Tab Content -->
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <span class="tab-highlight">2026</span>
+                                <span class="tab-desc">Canva Design</span>
+                            </li>
+                            <li>
+                                <span class="tab-highlight">2024</span>
+                                <span class="tab-desc">Data Science with AI & ML at Cranes Varsity</span>
+                            </li>
+                            <li>
+                                <span class="tab-highlight">2023</span>
+                                <span class="tab-desc">Machine Learning with Python</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Education Tab Content -->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <span class="tab-highlight">2026</span>
+                                <span class="tab-desc">MCA from AIGS College, Bangalore</span>
+                            </li>
+                            <li>
+                                <span class="tab-highlight">2024</span>
+                                <span class="tab-desc">BCA from AIGS College, Bangalore</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- My Works Section -->
+    <section id="works">
+        <div class="container">
+            <h1 class="sub-title">My Works</h1>
+            <p class="section-desc">Creative Graphic Designer</p>
+            <div class="work-list">
+                <div class="work-card" onclick="openLightbox('images/work1.png', 'Creative Graphic Design - Composition 1')">
+                    <img src="images/work1.png" alt="Graphic Design Work 1">
+                    <div class="layer">
+                        <h3>Graphic Design 1</h3>
+                        <p>Visual assets, icons, and compositions crafted in Figma & Canva.</p>
+                        <span class="zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                    </div>
+                </div>
+                <div class="work-card" onclick="openLightbox('images/work2.png', 'Creative Graphic Design - Composition 2')">
+                    <img src="images/work2.png" alt="Graphic Design Work 2">
+                    <div class="layer">
+                        <h3>Graphic Design 2</h3>
+                        <p>Branding materials, illustrations, and user interface mocks.</p>
+                        <span class="zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                    </div>
+                </div>
+                <div class="work-card" onclick="openLightbox('images/work3.png', 'Creative Graphic Design - Composition 3')">
+                    <img src="images/work3.png" alt="Graphic Design Work 3">
+                    <div class="layer">
+                        <h3>Graphic Design 3</h3>
+                        <p>Poster layouts, digital sketches, and marketing banners.</p>
+                        <span class="zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                    </div>
+                </div>
+                <div class="work-card" onclick="openLightbox('images/work4.png', 'Creative Graphic Design - Composition 4')">
+                    <img src="images/work4.png" alt="Graphic Design Work 4">
+                    <div class="layer">
+                        <h3>Graphic Design 4</h3>
+                        <p>Visual UI flow mockups and layout typography templates.</p>
+                        <span class="zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h1 class="sub-title">Project</h1>
+            
+            <div class="project-details">
+                <h2 class="project-title">AI-Based Fitness Trainer</h2>
+                <p class="project-description">
+                    AI-Based Fitness Trainer is an AI-powered web application that allows users to upload images for analysis. 
+                    The system identifies visual content, generates intelligent insights and descriptions, and presents the results 
+                    through a simple, user-friendly interface.
+                </p>
+            </div>
+            <!-- Image Grid of details, chatbot, and admin panel -->
+            <div class="project-grid">
+                <div class="project-card" onclick="openLightbox('images/project-image1.png', 'AI Fitness Trainer - Main Dashboard')">
+                    <div class="project-img-wrapper">
+                        <img src="images/project-image1.png" alt="AI Fitness Trainer Main">
+                    </div>
+                    <div class="project-info">
+                        <h4>Main Portal Dashboard</h4>
+                        <p>User-friendly landing page and primary image upload system for posture evaluation.</p>
+                    </div>
+                </div>
+                <div class="project-card" onclick="openLightbox('images/project-image2.png', 'AI Fitness Trainer - Real-time Posture Analysis')">
+                    <div class="project-img-wrapper">
+                        <img src="images/project-image2.png" alt="Posture Analysis">
+                    </div>
+                    <div class="project-info">
+                        <h4>Posture Analysis</h4>
+                        <p>Real-time pose assessment & joint coordinate mapping.</p>
+                    </div>
+                </div>
+                <div class="project-card" onclick="openLightbox('images/project-image3.png', 'AI Fitness Trainer - User Analytics Graphs')">
+                    <div class="project-img-wrapper">
+                        <img src="images/project-image3.png" alt="Analytics Charts">
+                    </div>
+                    <div class="project-info">
+                        <h4>Workout Analytics</h4>
+                        <p>Visual statistics and progress logs of daily exercise routines.</p>
+                    </div>
+                </div>
+                <div class="project-card" onclick="openLightbox('images/project-image4.png', 'AI Fitness Trainer - Fitness Reports')">
+                    <div class="project-img-wrapper">
+                        <img src="images/project-image4.png" alt="Diagnostic Reports">
+                    </div>
+                    <div class="project-info">
+                        <h4>Evaluation Reports</h4>
+                        <p>Automated Diagnostic Reports and calorie burn evaluations.</p>
+                    </div>
+                </div>
+                <div class="project-card" onclick="openLightbox('images/project-image5.png', 'AI Fitness Trainer - Visual Workout Guides')">
+                    <div class="project-img-wrapper">
+                        <img src="images/project-image5.png" alt="Workout Demonstration">
+                    </div>
+                    <div class="project-info">
+                        <h4>Trainer Instruction</h4>
+                        <p>Step-by-step tutorial guides and exercise postures.</p>
+                    </div>
+                </div>
+                <!-- Chatbot Image -->
+                <div class="project-card" onclick="openLightbox('images/project-image6-chatbot.png', 'AI Fitness Chatbot - Instant Support Interface')">
+                    <div class="project-img-wrapper">
+                        <img src="images/project-image6-chatbot.png" alt="AI Chatbot Interface">
+                    </div>
+                    <div class="project-info">
+                        <h4>AI Fitness Chatbot</h4>
+                        <p>AI-powered assistant providing instant workout support and query recognition.</p>
+                    </div>
+                </div>
+                <!-- Admin Image -->
+                <div class="project-card" onclick="openLightbox('images/admin-image.png', 'Admin Control Panel Dashboard')">
+                    <div class="project-img-wrapper">
+                        <img src="images/admin-image.png" alt="Admin Dashboard Interface">
+                    </div>
+                    <div class="project-info">
+                        <h4>Admin Panel Control</h4>
+                        <p>Management dashboard monitoring database metrics and user diagnostics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Me Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-center">
+                <h1 class="sub-title">Contact</h1>
+                <p class="contact-email">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <a href="mailto:jinsonjose2001@gmail.com">jinsonjose2001@gmail.com</a>
+                </p>
+                <div class="social-icons">
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <!-- Download CV Button -->
+                <a href="images/My Resume CV.pdf" download="Jinson_Jose_Resume.pdf" class="btn btn-animated">
+                    Download CV <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Zoomed Portfolio Image">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+    <!-- Scripts -->
+    <script>
+        // Hero Rotating Text Animation
+        const roleText = document.getElementById("role-text");
+        if (roleText) {
+            const roles = ["Creative Graphic Designer", "Frontend Developer", "Data Analytics"];
+            let currentRoleIdx = 0;
+            function rotateRoles() {
+                roleText.classList.remove("active");
+                roleText.classList.add("inactive");
+
+                setTimeout(() => {
+                    currentRoleIdx = (currentRoleIdx + 1) % roles.length;
+                    roleText.textContent = roles[currentRoleIdx];
+                    roleText.classList.remove("inactive");
+                    roleText.classList.add("active");
+                }, 200);
+            }
+            setInterval(rotateRoles, 1100);
+        }
+        // Sticky Navbar Effect on Scroll
+        window.addEventListener("scroll", () => {
+            const navbar = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+        // Mobile Nav Drawer Toggle
+        const sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.classList.add("open");
+        }
+        function closemenu() {
+            sidemenu.classList.remove("open");
+        }
+        // About Tab Swapping Logic
+        const tabLinks = document.getElementsByClassName("tab-links");
+        const tabContents = document.getElementsByClassName("tab-contents");
+        function openTab(event, tabname) {
+            for (let i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].classList.remove("active-link");
+            }
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        // Lightbox Modal Functions
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const lightboxCaption = document.getElementById("lightbox-caption");
+        function openLightbox(src, captionText) {
+            lightboxImg.src = src;
+            lightboxCaption.textContent = captionText;
+            lightbox.classList.add("active");
+            document.body.style.overflow = "hidden"; // Disable scroll when lightbox is open
+        }
+        function closeLightbox() {
+            lightbox.classList.remove("active");
+            document.body.style.overflow = "auto"; // Re-enable scroll
+        }
+    </script>
+</body>
+</html>
